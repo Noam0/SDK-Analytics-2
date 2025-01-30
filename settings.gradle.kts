@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AnalyticsSDK2"
 include(":AnalyticsSDK-2") // Ensure it matches your module name
+include(":myapplication")

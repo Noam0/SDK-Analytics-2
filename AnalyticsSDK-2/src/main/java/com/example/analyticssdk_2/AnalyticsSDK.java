@@ -3,6 +3,8 @@ package com.example.analyticssdk_2;
 import android.app.Application;
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.example.analyticssdk_2.endPoints.LogManager;
 import com.example.analyticssdk_2.endPoints.UserManager;
@@ -15,12 +17,18 @@ public class AnalyticsSDK {
     private static AnalyticsSDK instance;
     private final ApiService apiService;
     private final String appId;
+    private final String baseUrl;
     private static Context appContext;
-    // Constructor to initialize ApiService and appId
-    private AnalyticsSDK(Context context, String baseUrl, String appId) {
-        appContext = context.getApplicationContext();
-        this.appId = appId;
 
+    private static final String PREFS_NAME = "AnalyticsPrefs";
+    private static final String USER_ID_KEY = "user_id";
+
+    // Constructor to initialize ApiService and appId
+    private AnalyticsSDK(Context context) {
+        this.appContext = context.getApplicationContext();
+        this.appId = context.getPackageName();
+
+        this.baseUrl = "http://10.0.2.2:5000/";
         // Initialize Retrofit
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
@@ -38,10 +46,11 @@ public class AnalyticsSDK {
     }
 
     // Initialize the AnalyticsSDK
-    public static void initialize(Context context, String baseUrl, String appId) {
+    public static void initialize(Context context) {
         if (instance == null) {
-            instance = new AnalyticsSDK(context, baseUrl, appId);
+            instance = new AnalyticsSDK(context);
         }
+
     }
 
     // Get the singleton instance of AnalyticsSDK
@@ -85,6 +94,10 @@ public class AnalyticsSDK {
         LogManager.sendLog(logType, description);
     }
 
+    public static String getUserId() {
+        SharedPreferences prefs = appContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        return prefs.getString(USER_ID_KEY, null);
+    }
 
 
 

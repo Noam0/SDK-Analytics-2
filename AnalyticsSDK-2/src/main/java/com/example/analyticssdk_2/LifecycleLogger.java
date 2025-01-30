@@ -32,7 +32,9 @@ public class LifecycleLogger implements Application.ActivityLifecycleCallbacks {
     }
 
     @Override
-    public void onActivityStopped(Activity activity) {}
+    public void onActivityStopped(Activity activity) {
+        LogManager.sendLog("LifeCycle", "App Stopped");
+    }
 
     @Override
     public void onActivityDestroyed(Activity activity) {

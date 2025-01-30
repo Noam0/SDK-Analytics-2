@@ -1,6 +1,10 @@
 package com.example.analyticssdk_2.endPoints;
 
 
+import static com.example.analyticssdk_2.AnalyticsSDK.getUserId;
+
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.example.analyticssdk_2.AnalyticsSDK;
@@ -10,6 +14,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 public class LogManager {
 
+
+
+
     /**
      * Sends a log to the server.
      *
@@ -17,8 +24,14 @@ public class LogManager {
      * @param description The log description (e.g., stack trace or error details).
      */
     public static void sendLog(String logType, String description) {
+
+        String userId = getUserId();
+        userId = (userId != null) ? userId : "DefaultUserId";
+        Log.d("UserIDLOG", userId);
+
         String appId = AnalyticsSDK.getInstance().getAppId();
-        LogRequest logRequest = new LogRequest(appId, logType, description);
+
+        LogRequest logRequest = new LogRequest(appId, userId, logType, description);
 
         AnalyticsSDK.getInstance().getApiService().createLog("application/json", logRequest)
                 .enqueue(new Callback<Void>() {
@@ -37,6 +50,7 @@ public class LogManager {
                     }
                 });
     }
+
 
 
 }
