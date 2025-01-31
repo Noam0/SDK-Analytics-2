@@ -104,5 +104,5 @@ Contributions are welcome! Feel free to submit issues or open pull requests.
 This project is licensed under the **MIT License**.
 
 ---
-📌 **Maintained by:** Your Team Name 🔥
+📌 **Maintained by:** Noam Ben Binyamin & Yosi Ben Shushan 🔥
 
