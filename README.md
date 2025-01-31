@@ -74,7 +74,15 @@ AnalyticsSDK.createLog("PageViewed", "User viewed the settings page");
 AnalyticsSDK.createLog("DataExport", "User exported activity data");
 ```
 
-## 📸 Screenshots
+## ⭐ App Rating Integration  
+Easily prompt users to rate your app with just one line of code:  
+```java
+AnalyticsSDK.showRatingDialog(this);
+````
+<img src="https://github.com/user-attachments/assets/e9d23026-d259-4429-a2c7-28ed9690b9d5" width="200" height="450">
+
+ 
+## 📸 Your Web Page Analytics Screenshots
 Below are images showcasing the SDK in action:
 ![Image](https://github.com/user-attachments/assets/481fdcad-caf8-412a-8090-3d500d91ec4b)
 
