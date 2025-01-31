@@ -4,8 +4,8 @@
 The **Analytics SDK** provides seamless tracking and real-time logging for Android applications. Designed for minimal integration effort, this SDK enables developers to collect vital user analytics without writing extra tracking code.
 
 <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="https://github.com/user-attachments/assets/481fdcad-caf8-412a-8090-3d500d91ec4b" width="600" height="300">
-    <img src="https://github.com/user-attachments/assets/2aaca6d7-6607-4acf-89f6-39a9c61bfd64" width="330" height="330">
+    <img src="https://github.com/user-attachments/assets/481fdcad-caf8-412a-8090-3d500d91ec4b" width="500" height="200">
+    <img src="https://github.com/user-attachments/assets/2aaca6d7-6607-4acf-89f6-39a9c61bfd64" width="250" height="250">
 </div>
 
 
