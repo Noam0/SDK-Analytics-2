@@ -21,7 +21,7 @@ import retrofit2.Response;
 
 public class AppRatingsManager {
 
-    public static void showRatingDialog(Activity activity) {
+    public static void showRatingDialog(Activity activity, String userId) {
         View dialogView = LayoutInflater.from(activity).inflate(R.layout.rating_dialog, null);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
@@ -38,7 +38,7 @@ public class AppRatingsManager {
             int rating = (int) ratingBar.getRating();
             String comment = commentEditText.getText().toString();
 
-            rateApp(rating, comment);
+            rateApp(userId, rating, comment);
 
             dialog.dismiss();
         });
@@ -48,9 +48,9 @@ public class AppRatingsManager {
         dialog.show();
     }
 
-    public static void rateApp(int rating, String comment) {
+    public static void rateApp(String userId , int rating, String comment) {
         String appId = AnalyticsSDK.getInstance().getAppId();
-        AppRatingRequest request = new AppRatingRequest(appId, "homiz", rating, comment);
+        AppRatingRequest request = new AppRatingRequest(appId, userId, rating, comment);
 
         Gson gson = new Gson();
         String jsonPayload = gson.toJson(request);
@@ -61,6 +61,7 @@ public class AppRatingsManager {
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
                     System.out.println("App rated successfully!");
+                    LogManager.sendLog("Other" , "User Rated " + rating+ "Your App ");
                 } else {
                     System.err.println("Failed to rate app: " + response.code());
                     System.err.println("Response message: " + response.message());

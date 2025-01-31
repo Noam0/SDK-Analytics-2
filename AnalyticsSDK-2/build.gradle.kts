@@ -37,7 +37,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 groupId = "com.github.Noam0"  // ✅ Use the correct GitHub username
                 artifactId = "AnalyticsSDK" // ✅ Use the correct library name
-                version = "1.0.13"  // ✅ Update for new releases
+                version = "1.0.14"  // ✅ Update for new releases
 
                 artifact(tasks.getByName("bundleReleaseAar")) // ✅ Publish AAR file
 

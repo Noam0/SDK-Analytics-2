@@ -79,7 +79,8 @@ public class AnalyticsSDK {
 
     // Utility method to show the rating dialog
     public static void showRatingDialog(Activity activity) {
-        AppRatingsManager.showRatingDialog(activity);
+        String userId= getUserId();
+        AppRatingsManager.showRatingDialog(activity,userId );
     }
 
     // public static void updateUserLastSeen() {

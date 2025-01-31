@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        AnalyticsSDK.showRatingDialog(this);
         findViewById(R.id.btn_crash_nullpointer).setOnClickListener(view -> testNullPointerException());
         findViewById(R.id.btn_crash_index).setOnClickListener(view -> testIndexOutOfBoundsException());
         findViewById(R.id.btn_crash_illegal_arg).setOnClickListener(view -> testIllegalArgumentException());
