@@ -3,6 +3,12 @@
 ## 🚀 Overview
 The **Analytics SDK** provides seamless tracking and real-time logging for Android applications. Designed for minimal integration effort, this SDK enables developers to collect vital user analytics without writing extra tracking code.
 
+<div style="display: flex; justify-content: center; align-items: center;">
+    <img src="https://github.com/user-attachments/assets/481fdcad-caf8-412a-8090-3d500d91ec4b" width="600" height="300">
+    <img src="https://github.com/user-attachments/assets/2aaca6d7-6607-4acf-89f6-39a9c61bfd64" width="330" height="330">
+</div>
+
+
 ## 🛠️ Features
 - **User Analytics**: Track total users, daily logins, session duration, and retention rates.  
 - **Event Logging**: Monitor key user interactions like button clicks, page views, and feature usage.  
@@ -67,10 +73,9 @@ AnalyticsSDK.createLog("DataExport", "User exported activity data");
 
 ## 📸 Screenshots
 Below are images showcasing the SDK in action:
-
-![Image](https://github.com/user-attachments/assets/50942f71-9708-42e7-b961-c4e8583181e8)
-
 ![Image](https://github.com/user-attachments/assets/481fdcad-caf8-412a-8090-3d500d91ec4b)
+
+![Image](https://github.com/user-attachments/assets/bd6608cf-6c12-460f-a0f4-603dffc83abe)
 
 ![Image](https://github.com/user-attachments/assets/adc9001a-3710-4a69-87e9-23e2b003e578)
 
