@@ -14,8 +14,11 @@ The **Analytics SDK** provides seamless tracking and real-time logging for Andro
 - **Event Logging**: Monitor key user interactions like button clicks, page views, and feature usage.  
 - **Crash & Error Tracking**: Detect application crashes and API request failures in real-time.  
 - **Geolocation Analytics**: Log geographical data for improved regional insights.  
-- **Secure Data Handling**: Stored logs are encrypted and efficiently managed.  
-- **JitPack Compatible**: Easily integrate via **JitPack** with minimal configuration.  
+- **Secure Data Handling**: Stored logs are encrypted and efficiently managed.
+- **App Rating Analytics**: Collect and analyze user feedback through app ratings and comments.
+- **JitPack Compatible**: Easily integrate via **JitPack** with minimal configuration.
+
+
 
 ## 📦 Installation
 To use this SDK, add the dependency to your **Android project** using JitPack:
